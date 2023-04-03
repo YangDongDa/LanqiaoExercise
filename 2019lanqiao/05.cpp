@@ -15,8 +15,10 @@ int main (int argc, char *argv[])
     int sum[1000];
     int depth = 1;
     int max = 0;
-    int max_index = 0;
-    int i = 1;
+    int max_index = 1;
+    cin >> a[1];
+    max = a[1];
+    int i = 2;
     while( i <= n ){
         cin >> a[i];
         sum[depth] += a[i];
