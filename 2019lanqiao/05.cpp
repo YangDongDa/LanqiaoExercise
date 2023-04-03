@@ -12,20 +12,15 @@ int main (int argc, char *argv[])
     int n;
     cin >> n;
     int a[n+1];
-    int sum[1000];
+    int sum[1000] = {0};
     int depth = 1;
     int max = 0;
     int max_index = 1;
-    cin >> a[1];
-    max = a[1];
-    int i = 2;
+    //max = a[1];
+    int i = 1;
     while( i <= n ){
         cin >> a[i];
         sum[depth] += a[i];
-        if( sum[depth] > max ){
-            max = sum[depth];
-            max_index = depth;
-        }
         i++;
         if(i == pow(2 , depth)){
             depth++;
@@ -33,16 +28,22 @@ int main (int argc, char *argv[])
 
 
     }
-    // for (int i = 1; i <= n; i++) {
-    //     cin >> a[i];
-    //     int temp = log2(i) + 1;
-    //     sum[temp] += a[i];
-    //     if (sum[temp] > max) {
-    //         max = sum[temp];
-    //         max_index = temp;
-    //     }
-    // }
+    /*
+     for (int i = 1; i <= n; i++) {
+         cin >> a[i];
+         int temp = log2(i) + 1;
+         sum[temp] += a[i];
+         
+     }*/
+     int temp = log2(n) + 1;
+     max = sum[1];
+    for (int i = 1 ; i <= temp;i++){
+        if(sum[i] > max) {
+          max = sum[i];
+          max_index = i;
+        }
+     }
     cout << max_index << endl;
     return 0;
-}
+}}
 
