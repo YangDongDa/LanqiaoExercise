@@ -45,5 +45,5 @@ int main (int argc, char *argv[])
      }
     cout << max_index << endl;
     return 0;
-}}
+}
 
