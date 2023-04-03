@@ -53,20 +53,20 @@ int main (int argc, char *argv[])
 
     }
     int count = 0;
-    for (int i = 1; i <= n; i++) {
+    for (long i = 1; i <= n; i++) {
         if (left[i] == 1) {
             count++;
         }
     }
     cout <<count << endl;
-    // for(int i = 1; i <= n; i++){
-    //     cout << i << " :";
-    //     for(int j = 1; j <= t; j++ ){
-    //         cout << order[j][i] << " ";
-    //     }
-    //     cout << endl;
-    // }
+    for(int i = 1; i <= n; i++){
+        cout << i << " :";
+        for(int j = 1; j <= t; j++ ){
+            cout << order[j][i] << " ";
+        }
+        cout << endl;
+    }
 
-    
+
     return 0;
 }
