@@ -18,15 +18,15 @@ int main (int argc, char *argv[])
 {
     int n;
     cin >> n;
-    int *fa = new int[n+1];
-    initSet(fa,n+1);
+    int fa [1000001];
+    initSet(fa,1000001);
     for(int i = 0; i < n; i++){
         int a;
         int temp;
         cin >> a;
         temp = findSet(fa,a);
         cout << temp << " ";
-        if(temp != n) unionSet(fa,temp,temp + 1);
+        if(temp != 1000001) unionSet(fa,temp,temp + 1);
     }
     return 0;
 }
