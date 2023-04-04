@@ -33,7 +33,7 @@ int main (int argc, char *argv[])
             if(ts - last_time > 1){
                 priority -= (ts - last_time - 1);
                 if(priority < 0){
-                    priority = 0;
+                  priority = 0;
                 }
                 if(priority <= 3 && left == 1){
                     left = 0;
