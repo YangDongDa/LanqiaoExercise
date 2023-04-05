@@ -16,14 +16,16 @@ int main (int argc, char *argv[])
         // cout << B[i] << " ";
     }
     // cout << endl;
-    memset(S,127,sizeof(S));
+    memset(S,1,sizeof(S));
     S[0] = 0;
     for (int i = 0; i < N; i++){
         for (int j = 0; j < (1 << M); j++){
+            if(S[j] > 105) continue;
             S[j | B[i + 1]] = min(S[j] + 1,S[j | B[i + 1]]);
+
         }
     }
-    if(S[(1 << M) - 1] == 127) cout << -1 << endl;
+    if(S[(1 << M) - 1]  > 105) cout << -1 << endl;
     else cout << S[(1 << M) - 1] << endl;
     return 0;
 }
